@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA 6 Trophy Guide — Leonida Checklist</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="title-block">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>GTA 6 Trophy Guide <span>Leonida Checklist</span></h1>
+    <p class="sub">Every official trophy, a guide in our own words with its sources, a roadmap to the platinum, and a checklist that saves in your browser. Works offline. No online trophies.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="progress-line"><strong id="progressText">0 of 55 earned</strong> <span id="progressPct">0%</span></p>
+    <div class="bar" role="progressbar" aria-label="Progress toward platinum" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBarWrap"><div class="bar-fill" id="progressFill"></div></div>
+    <p class="progress-note" id="progressNote">Platinum: Vice Got a Price! — earn the other 54.</p>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button type="button" data-view="checklist" class="view-btn active">Checklist</button>
+  <button type="button" data-view="roadmap" class="view-btn">Roadmap to Platinum</button>
+  <button type="button" data-view="missable" class="view-btn">Missable trophies</button>
+</nav>
+
+<section class="controls" aria-label="Filters and tools">
+  <label class="search-label">Search <input id="search" type="search" placeholder="Trophy, mission or place…" autocomplete="off"></label>
+  <label>Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label>Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="side">Side missions</option>
+      <option value="collectible">Collectibles</option>
+      <option value="activity">Activities</option>
+      <option value="stunt">Stunts</option>
+      <option value="crime">Crime &amp; robberies</option>
+      <option value="exploration">Exploration</option>
+      <option value="completion">100% completion</option>
+      <option value="platinum">Platinum</option>
+    </select>
+  </label>
+  <label class="check-label"><input id="missableOnly" type="checkbox"> Missable only</label>
+  <label class="check-label"><input id="hiddenOnly" type="checkbox"> Hidden only</label>
+  <label>Earned
+    <select id="earnedFilter">
+      <option value="all">Show all</option>
+      <option value="earned">Earned only</option>
+      <option value="unearned">Not yet earned</option>
+    </select>
+  </label>
+  <label class="check-label spoiler-label"><input id="spoilerToggle" type="checkbox"> Spoiler-safe mode <span class="hint">hides story names until earned</span></label>
+  <span class="tools">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button">Reset checklist</button>
+  </span>
+</section>
+
+<main>
+  <section id="checklistView" class="view">
+    <p class="result-line" id="resultLine"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyNote" hidden>No trophies match these filters. Clear the search or widen a filter.</p>
+  </section>
+
+  <section id="roadmapView" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">One playthrough, about 200 hours, difficulty about 4 out of 10. Do the stages in order: the story first (and the one possibly-missable meditation in Chapter 1), then side strands, activities, collectibles, crime and money, and finally the 100% cleanup. The checklist under Progress only appears after the story ends.</p>
+    <ol class="stages" id="stageList"></ol>
+    <p class="roadmap-note">Save smart: the game has no mission replay and 15 manual save slots plus one autosave. Keep a separate save at the start and end of every chapter. Cheats unlock only after the story and they disable trophies and saving, so leave them off on a trophy run.</p>
+  </section>
+
+  <section id="missableView" class="view" hidden>
+    <h2>Missable trophies</h2>
+    <p class="missable-intro">Good news: almost nothing can be missed. After the story ends, Leonida stays open for free roam, every side character tied to a trophy is still around, and the 100% checklist opens up. Only one trophy needs care during the story.</p>
+    <div id="missableList"></div>
+    <h3>Safe to leave for later</h3>
+    <p>Every other trophy can be earned after the final mission in free roam: all side strands, all collectibles, all activities, all robberies and all counts. Optional missions can expire and a few fences can disappear for good, but none of those blocks a trophy.</p>
+  </section>
+</main>
+
+<aside class="detail" id="detailPanel" hidden aria-label="Trophy guide detail">
+  <button type="button" class="detail-close" id="detailClose">Close &times;</button>
+  <div id="detailBody"></div>
+</aside>
+
+<footer>
+  <p>Guides written for this entry in our own words; official trophy names, descriptions and grades as PlayStation publishes them. Each guide names its sources — follow a source link to check a fact. Five trophies were still unconfirmed on 20 November 2026 and their guides say so honestly instead of guessing. Sources consulted: PushSquare, Gamemapa, KeenGamer, EGamers, HowToVideoGame, Mobalytics, Games.gg.</p>
+  <p class="foot-note">Unofficial fan guide. Not affiliated with Rockstar Games. No official artwork or logos are used. Your checklist never leaves your browser except when you export it yourself.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
